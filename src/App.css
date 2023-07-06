@@ -1,0 +1,237 @@
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.admin {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 20px;
+}
+
+body {
+  overflow: "hidden";
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.banner-title {
+  font-family: "Play", sans-serif;
+  font-size: 300%;
+}
+
+.cart-notif {
+  font-family: "Play", sans-serif;
+  font-weight: bold;
+  border: 2px solid #060b26;
+  padding: 2px;
+}
+
+.thumbnail-cart {
+  max-width: 15vw;
+  max-height: 15vh;
+  grid-area: a;
+}
+
+.thumbnail:hover {
+  transform: scale(1.25);
+  border-radius: 50%;
+}
+.items-text {
+  padding-left: 5%;
+}
+
+.subtotal {
+  font-size: 22px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  color: #202020;
+  float: right;
+  padding-right: 5%;
+}
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-btn {
+  font-weight: bold;
+}
+.form-contents {
+  background: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  color: white;
+}
+.form-contents a {
+  color: white;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.register-btn {
+  font-weight: bold;
+}
+.login-btn {
+  font-weight: bold;
+}
+
+.user-info {
+  margin-top: 20px;
+  padding: 5px;
+  background-color: lightgrey;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.user-id {
+  grid-column-start: 1;
+}
+
+.user-username {
+  grid-column-start: 2;
+}
+
+.user-email {
+  grid-column-start: 3;
+}
+
+.user-admin {
+  grid-column-start: 4;
+}
+
+.backgroundImage {
+  height: 100vh;
+  margin-top: -43px;
+  background-size: cover;
+  background-image: url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740");
+  background-repeat: "no-repeat";
+}
+
+.welcome {
+  font-size: xx-large;
+  display: center;
+  text-align: center;
+  width: fit-content;
+  margin-left: 32%;
+  color: white;
+  background-color: rgb(0 0 0 / 56%);
+}
+
+footer {
+  position: absolute;
+
+  background: #111;
+  height: auto;
+  width: auto;
+  padding-top: 40px;
+  color: #fff;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h1 {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links li {
+  margin: 0 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.footer-links a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.footer-bottom h2 {
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  color: #44bae8;
+}
+
+.footer-menu {
+  float: right;
+}
+
+.footer-menu ul {
+  display: flex;
+}
+
+.footer-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+
+.footer-menu ul li a {
+  color: #cfd2d6;
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  color: #27bcda;
+}
+
+@media (max-width: 500px) {
+  .footer-menu ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
