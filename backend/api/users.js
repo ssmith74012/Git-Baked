@@ -27,7 +27,6 @@ usersRouter.post("/register", async (req, res, next) => {
 });
 
 usersRouter.post("/login", async (req, res, next) => {
-
   const { username, password } = req.body;
 
   try {
@@ -41,7 +40,7 @@ usersRouter.post("/login", async (req, res, next) => {
         { id: user.id, username: user.username, admin: user.admin },
         JWT_SECRET
       );
-      
+
       return res.send({ message: "You're Logged In!", token, user: user });
     }
   } catch (error) {
@@ -62,7 +61,7 @@ usersRouter.get("/", async (req, res) => {
 usersRouter.get("/me", async (req, res, next) => {
   try {
     res.send({ user: req.user });
-    console.log("got the request")
+    console.log("got the request");
   } catch (error) {
     throw error;
   }
