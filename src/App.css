@@ -126,7 +126,8 @@ body {
 }
 
 .backgroundImage {
-  height: 100vh;
+  height: 800px;
+
   margin-top: -43px;
   background-size: cover;
   background-image: url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740");
@@ -147,7 +148,7 @@ footer {
   position: absolute;
 
   background: #111;
-  height: auto;
+  height: 200px;
   width: auto;
   padding-top: 40px;
   color: #fff;
@@ -234,4 +235,45 @@ footer {
     margin-top: 10px;
     margin-bottom: 20px;
   }
+}
+.image-carousel {
+  display: flex;
+  flex-direction: center;
+  position: center;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: red;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button.prev {
+  display: flex;
+  height: auto;
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+img {
+  display: block;
+  width: 60%;
+  height: 60%;
+  object-fit: center;
 }

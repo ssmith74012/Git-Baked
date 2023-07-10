@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import BASE_URL from "../BaseURL";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import "./Form.css";
@@ -49,8 +48,8 @@ const Register = (props) => {
         backgroundImage: `url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh",
+        backgroundPosition: "cover",
+        height: "800px",
         overflow: "hidden",
       }}
     >

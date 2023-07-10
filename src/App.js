@@ -152,7 +152,18 @@ function App() {
           path="/create_product"
           element={<NewProduct user={user} fetchProducts={fetchProducts} />}
         /> */}
-        {/* <Route path="/products" element={<Products />} /> */}
+        <Route
+          path="/products"
+          element={
+            <fetchCartProducts
+              fetchCartProducts={fetchCartProducts}
+              setCartProducts={setCartProducts}
+              user={user}
+              activeOrder={activeOrder}
+              setActiveOrder={setActiveOrder}
+            />
+          }
+        />
         <Route
           path="/cart"
           element={

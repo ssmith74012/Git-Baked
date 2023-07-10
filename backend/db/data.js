@@ -9,5 +9,22 @@ const data = {
       category_id: 1,
       description: "Chocolate Chip cookie",
     },
+    {
+      user_id: 1,
+      name: "Everything Bagels",
+      price: 10,
+      image: "https://kottke.org/plus/misc/images/everything%20bagel.jpg",
+      category_id: 2,
+      description: "Everything Bagels",
+    },
+    {
+      user_id: 1,
+      name: "Red Velvet Cake",
+      price: 10,
+      image:
+        "https://www.bakefromscratch.com/wp-content/uploads/2016/10/RedVelvet037WD-696x497.jpg",
+      category_id: 3,
+      description: "Red Velvet Cake",
+    },
   ],
 };
