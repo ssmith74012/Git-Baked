@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ImageCarousel from "./ImageCarousel";
+import "../App.css";
 
 const Home = () => {
   const carouselImages = [
@@ -10,10 +11,54 @@ const Home = () => {
   ];
 
   return (
-    <div>
-      <h1>Welcome to Git Baked!</h1>
-      <ImageCarousel images={carouselImages} />
-      {/* Add the rest of your home page content */}
+    <div
+      style={{
+        backgroundImage: `url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740")`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "cover",
+        height: "100vh",
+        overflow: "hidden",
+      }}
+    >
+      <div>
+        <h1>Welcome to Git Baked!</h1>
+        <ImageCarousel images={carouselImages} />
+        {/* Add the rest of your home page content */}
+      </div>
+      <footer class="footer-content">
+        <h1> Git Baked </h1>
+        <ul class="footer-links">
+          <li>
+            <a href="/products"> Products </a>
+          </li>
+          <li>
+            <a href="/contact"> Contact Us </a>
+          </li>
+          <li>
+            <a href="/about"> About Us </a>
+          </li>
+        </ul>
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li>
+              <a href="/"> Home</a>
+            </li>
+            <li>
+              <a href="/products"> Products</a>
+            </li>
+            <li>
+              <a href="/login"> Login </a>
+            </li>
+            <li>
+              <a href="/register"> Register </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <h2> 2023 Fullstack Academy Cohort </h2>
+        </div>
+      </footer>
     </div>
   );
 };

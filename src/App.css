@@ -239,32 +239,11 @@ footer {
 .image-carousel {
   display: flex;
   flex-direction: center;
-  position: center;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
   height: 800px;
   overflow: hidden;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: red;
-  border: none;
-  color: #ffffff;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-button.prev {
-  display: flex;
-  height: auto;
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
+  margin: 20px;
 }
 
 .carousel-button:hover {
@@ -272,8 +251,19 @@ footer {
 }
 
 img {
-  display: block;
-  width: 60%;
-  height: 60%;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 70%;
   object-fit: center;
+  border-radius: 15px;
+  box-shadow: 20px 20px 50px grey;
+  margin-bottom: 250px;
+}
+
+h1 {
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 90px;
 }
