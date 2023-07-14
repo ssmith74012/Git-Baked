@@ -7,7 +7,7 @@ const Admin = (props) => {
       {user && user.admin ? (
         <div className="admin">
           <div className="add-product-2">
-            <Link to="/create_product">ADD NEW Product</Link>
+            <Link to="/create_product">ADD NEW PRODUCT</Link>
           </div>
           <br></br>
 

@@ -1,5 +1,10 @@
 const productsRouter = require("express").Router();
-const { getAllProducts, createProduct, getProductById } = require("../db");
+const {
+  getAllProducts,
+  createProduct,
+  getProductById,
+  updateProduct,
+} = require("../db");
 const multer = require("multer");
 
 const upload = multer({ dest: "public/images" });

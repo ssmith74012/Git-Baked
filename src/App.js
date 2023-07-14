@@ -5,9 +5,9 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-
+import NewProduct from "./components/NewProduct";
 import Register from "./components/Register";
-
+import Products from "./components/Products";
 import Cart from "./components/Cart";
 import Admin from "./components/Admin";
 
@@ -21,6 +21,7 @@ function App() {
   const [activeOrder, setActiveOrder] = useState({});
   const [cartProducts, setCartProducts] = useState([]);
   const [allProductOrders, setAllProductOrders] = useState([]);
+  const [updateProduct, setupdateProduct] = useState([]);
 
   const fetchProducts = async () => {
     try {
@@ -29,7 +30,7 @@ function App() {
       });
       const info = await response.json();
       setProducts(info);
-      setProducts("");
+      // setProducts(" ");
     } catch (error) {
       console.error(error);
     }
@@ -148,19 +149,24 @@ function App() {
           }
         />
 
-        {/* <Route
+        <Route
           path="/create_product"
           element={<NewProduct user={user} fetchProducts={fetchProducts} />}
-        /> */}
+        />
         <Route
           path="/products"
           element={
-            <fetchCartProducts
+            <Products
+              products={products}
+              setProducts={setProducts}
+              fetchProducts={fetchProducts}
               fetchCartProducts={fetchCartProducts}
               setCartProducts={setCartProducts}
               user={user}
               activeOrder={activeOrder}
               setActiveOrder={setActiveOrder}
+              // updateProduct={updateProduct}
+              // setupdateProduct={setupdateProduct}
             />
           }
         />

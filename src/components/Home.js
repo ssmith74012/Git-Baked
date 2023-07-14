@@ -11,18 +11,12 @@ const Home = () => {
   ];
 
   return (
-    <div
-      style={{
-        backgroundImage: `url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "cover",
-        height: "100vh",
-        overflow: "hidden",
-      }}
-    >
+    <div>
+      <img className="logo-image" src={require("../images/Git Baked-2.jpg")} />
+
       <div>
-        <h1>Welcome to Git Baked!</h1>
+        {/* <h1>Welcome to Git Baked!</h1> */}
+
         <ImageCarousel images={carouselImages} />
         {/* Add the rest of your home page content */}
       </div>

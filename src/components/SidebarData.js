@@ -12,6 +12,11 @@ export const SidebarData = [
 
   {
     title: "Products",
+    submenu: [
+      {
+        title: "Cookies",
+      },
+    ],
     path: "/products",
     icon: <FaIcons.FaCartPlus />,
     cName: "nav-text",

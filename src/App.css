@@ -20,6 +20,14 @@ body {
   box-sizing: border-box;
 }
 
+.logo-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 74px;
+  width: 150px;
+}
+
 .banner-title {
   font-family: "Play", sans-serif;
   font-size: 300%;
@@ -125,14 +133,14 @@ body {
   grid-column-start: 4;
 }
 
-.backgroundImage {
+/* .backgroundImage {
   height: 800px;
 
   margin-top: -43px;
   background-size: cover;
   background-image: url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740");
   background-repeat: "no-repeat";
-}
+} */
 
 .welcome {
   font-size: xx-large;
@@ -257,13 +265,20 @@ img {
   height: 70%;
   object-fit: center;
   border-radius: 15px;
-  box-shadow: 20px 20px 50px grey;
+  /* box-shadow: 20px 20px 50px grey; */
   margin-bottom: 250px;
 }
 
 h1 {
-  color: black;
-  font-family: sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 25px;
+  letter-spacing: 2.4px;
+  word-spacing: 2px;
+  color: #1075ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
   text-align: center;
-  font-size: 90px;
 }

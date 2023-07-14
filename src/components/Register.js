@@ -43,16 +43,7 @@ const Register = (props) => {
   };
 
   return (
-    <div
-      style={{
-        backgroundImage: `url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "cover",
-        height: "800px",
-        overflow: "hidden",
-      }}
-    >
+    <div>
       <form onSubmit={handlesubmit} className="form">
         <div className="form-contents">
           <div>
