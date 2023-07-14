@@ -29,6 +29,7 @@ productsRouter.post("/", upload.single("image"), async (req, res) => {
     const { user_id, title, description, price, quantity, category_id } =
       req.body;
     console.log(typeof quantity);
+    console.log(user_id);
     const product = await createProduct({
       user_id: user_id,
       title: title,
@@ -38,6 +39,7 @@ productsRouter.post("/", upload.single("image"), async (req, res) => {
       image: req.file.filename,
       category_id: category_id,
     });
+    // console.log("this is running");
 
     return res.send(product);
   } catch (error) {

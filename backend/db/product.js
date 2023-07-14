@@ -10,10 +10,10 @@ async function createProduct({
   category_id,
 }) {
   try {
+    console.log("create product works");
     const response = await client.query(
       `
-        INSERT INTO products(user_id, title, description, price, quantity, image, category_id ) 
-        VALUES($1, $2, $3, $4, $5, $6, $7)
+        INSERT INTO products(user_id, title, description, price, quantity, image, category_id ) VALUES ($1, $2, $3, $4, $5, $6, $7)
         RETURNING *;
       `,
       [user_id, title, description, price, quantity, image, category_id]
@@ -52,7 +52,12 @@ const getProductById = async (id) => {
   }
 };
 
-async function createProductOrders({ product_id, cartprice, order_id, cartquantity }) {
+async function createProductOrders({
+  product_id,
+  cartprice,
+  order_id,
+  cartquantity,
+}) {
   try {
     await client.query(
       `

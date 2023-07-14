@@ -92,7 +92,9 @@ const Products = (props) => {
   return (
     <>
       <div className="add-product">
-        {user && user.admin && <Link to="products">ADD NEW PRODUCT</Link>}
+        {user && user.admin && (
+          <Link to="/create_product">ADD NEW PRODUCT</Link>
+        )}
       </div>
       <div className="searchbar-div">
         <input
