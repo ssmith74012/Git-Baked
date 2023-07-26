@@ -18,29 +18,30 @@ server.use(express.json());
 const JWT_SECRET = "myfavouritecolourisblue";
 
 server.use(async (req, res, next) => {
-    const token = req.headers.authorization
-      ? req.headers.authorization.split(" ")[1]
-      : null;
+  const token = req.headers.authorization
+    ? req.headers.authorization.split(" ")[1]
+    : null;
 
-    if (!token) {
-        return next();
-      }
-      const decodedToken = jwt.verify(token, JWT_SECRET);
-    
-      const user = await getUserById(decodedToken.id);
-      delete user.password;
-      req.user = user;
-      return next();
-    });
-    
-    server.use("/users", usersRouter);
-    server.use("/orders", ordersRouter);
-    server.use("/products", productsRouter);
-    server.use("/getProducts", getProductsRouter);
-    server.use("/reviews", reviewsRouter);
-    server.use("/productorders", productOrdersRouter);
+  if (!token) {
+    return next();
+  }
+  console.log("the token is", token);
+  const decodedToken = jwt.verify(token, JWT_SECRET);
+  console.log("the decoded token is", decodedToken);
+  const user = await getUserById(decodedToken.id);
+  delete user.password;
+  req.user = user;
+  return next();
+});
 
-    server.listen(3001, () => {
-        client.connect();
-        console.log("The server is up on port 3001");
-      });
+server.use("/users", usersRouter);
+server.use("/orders", ordersRouter);
+server.use("/products", productsRouter);
+server.use("/getProducts", getProductsRouter);
+server.use("/reviews", reviewsRouter);
+server.use("/productorders", productOrdersRouter);
+
+server.listen(3001, () => {
+  client.connect();
+  console.log("The server is up on port 3001");
+});

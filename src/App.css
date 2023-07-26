@@ -1,17 +1,28 @@
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 25px;
+  letter-spacing: 2.4px;
+  word-spacing: 2px;
+  color: #1075ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: oblique;
+  font-variant: small-caps;
+  text-transform: none;
+  text-align: center;
+}
 #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .admin {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   margin: 20px;
 }
-
 body {
   overflow: "hidden";
   display: flex;
@@ -19,15 +30,13 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
 .logo-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 74px;
-  width: 150px;
+  height: 150px;
+  width: 260px;
 }
-
 .banner-title {
   font-family: "Play", sans-serif;
   font-size: 300%;
@@ -40,12 +49,25 @@ body {
   padding: 2px;
 }
 
+.product-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.thumbnail {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  flex-direction: row;
+}
+
 .thumbnail-cart {
   max-width: 15vw;
   max-height: 15vh;
   grid-area: a;
 }
-
 .thumbnail:hover {
   transform: scale(1.25);
   border-radius: 50%;
@@ -53,7 +75,6 @@ body {
 .items-text {
   padding-left: 5%;
 }
-
 .subtotal {
   font-size: 22px;
   font-family: "Open Sans";
@@ -67,6 +88,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .checkout-btn {
   font-weight: bold;
 }
@@ -81,13 +103,11 @@ body {
   color: white;
   font-weight: bold;
 }
-
 .input-container {
   display: flex;
   width: 100%;
   margin-bottom: 15px;
 }
-
 .icon {
   padding: 10px;
   background: dodgerblue;
@@ -103,10 +123,10 @@ body {
 .register-btn {
   font-weight: bold;
 }
+
 .login-btn {
   font-weight: bold;
 }
-
 .user-info {
   margin-top: 20px;
   padding: 5px;
@@ -116,31 +136,18 @@ body {
   grid-template-rows: 20px;
   grid-template-columns: repeat(4, 1fr);
 }
-
 .user-id {
   grid-column-start: 1;
 }
-
 .user-username {
   grid-column-start: 2;
 }
-
 .user-email {
   grid-column-start: 3;
 }
-
 .user-admin {
   grid-column-start: 4;
 }
-
-/* .backgroundImage {
-  height: 800px;
-
-  margin-top: -43px;
-  background-size: cover;
-  background-image: url("https://img.freepik.com/premium-photo/baked-round-macarons-beige-background-delicious-dessert-bottom-view_116441-20113.jpg?w=740");
-  background-repeat: "no-repeat";
-} */
 
 .welcome {
   font-size: xx-large;
@@ -151,10 +158,8 @@ body {
   color: white;
   background-color: rgb(0 0 0 / 56%);
 }
-
 footer {
   position: absolute;
-
   background: #111;
   height: 200px;
   width: auto;
@@ -168,7 +173,6 @@ footer {
   flex-direction: column;
   text-align: center;
 }
-
 .footer-content h1 {
   font-size: 25px;
   font-weight: 500;
@@ -182,11 +186,9 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
 .footer-links li {
   margin: 0 10px;
 }
-
 .footer-links a {
   text-decoration: none;
   color: #fff;
@@ -194,11 +196,9 @@ footer {
   padding: 5px;
   border-radius: 50%;
 }
-
 .footer-links a:hover i {
   color: aqua;
 }
-
 .footer-bottom {
   background: #000;
   width: 100vw;
@@ -214,25 +214,20 @@ footer {
   text-transform: capitalize;
   color: #44bae8;
 }
-
 .footer-menu {
   float: right;
 }
-
 .footer-menu ul {
   display: flex;
 }
-
 .footer-menu ul li {
   padding-right: 10px;
   display: block;
 }
-
 .footer-menu ul li a {
   color: #cfd2d6;
   text-decoration: none;
 }
-
 .footer-menu ul li a:hover {
   color: #27bcda;
 }
@@ -251,21 +246,19 @@ footer {
   align-items: center;
   height: 800px;
   overflow: hidden;
-  margin: 20px;
+  /* margin: 20px; */
 }
-
 .carousel-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
-img {
+.main-carousel {
   display: flex;
   align-items: center;
   width: 70%;
   height: 70%;
   object-fit: center;
   border-radius: 15px;
-  /* box-shadow: 20px 20px 50px grey; */
+  box-shadow: 20px 20px 50px grey;
   margin-bottom: 250px;
 }
 
@@ -281,4 +274,36 @@ h1 {
   font-variant: small-caps;
   text-transform: none;
   text-align: center;
+}
+
+.contact-us {
+  /* width: 400px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+  margin-top: -150px;
+}
+.contact-email {
+  display: flex;
+  height: 30px;
+  width: 300px;
+  text-align: center;
+}
+.contact-message {
+  display: flex;
+  height: 100px;
+  width: 300px;
+  text-align: center;
+  justify-content: center;
+}
+
+.contact-submitBTN {
+  height: 40px;
+  cursor: pointer;
+}
+
+.category {
+  cursor: pointer;
 }

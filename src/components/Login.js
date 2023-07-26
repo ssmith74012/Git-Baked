@@ -30,7 +30,7 @@ const Login = (props) => {
       });
 
       const info = await response.json();
-
+      console.log("The response is ", info);
       if (info.error) {
         setErrorMessage(info.error);
         return;
@@ -94,17 +94,6 @@ const Login = (props) => {
       </form>
       <footer class="footer-content">
         <h1> Git Baked </h1>
-        <ul class="footer-links">
-          <li>
-            <a href="/products"> Products </a>
-          </li>
-          <li>
-            <a href="/contact"> Contact Us </a>
-          </li>
-          <li>
-            <a href="/about"> About Us </a>
-          </li>
-        </ul>
         <div class="footer-menu">
           <ul class="f-menu">
             <li>

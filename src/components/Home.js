@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ImageCarousel from "./ImageCarousel";
 import "../App.css";
-
 const Home = () => {
   const carouselImages = [
     "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/7/11/0/FNK_the-best-crispy-chocolate-chip-cookies_H_s4x3.jpg.rend.hgtvcom.826.620.suffix/1562853894323.jpeg",
@@ -9,30 +8,35 @@ const Home = () => {
     "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=750&q=80",
     // Add more image URLs as needed
   ];
-
   return (
     <div>
-      <img className="logo-image" src={require("../images/Git Baked-2.jpg")} />
-
+      <section className="bakeryNav">
+        <img
+          className="logo-image"
+          src={require("../images/Git Baked-2.jpg")}
+        />
+        <ul>
+          <li>
+            <a href="/"> Home</a>
+          </li>
+          <li>
+            <a href="/products"> Products </a>
+          </li>
+          {/* <li>
+            <a href="/about"> About Us </a>
+          </li> */}
+          <li>
+            <a href="/contact"> Contact Us </a>
+          </li>
+        </ul>
+      </section>
       <div>
         {/* <h1>Welcome to Git Baked!</h1> */}
-
         <ImageCarousel images={carouselImages} />
         {/* Add the rest of your home page content */}
       </div>
       <footer class="footer-content">
         <h1> Git Baked </h1>
-        <ul class="footer-links">
-          <li>
-            <a href="/products"> Products </a>
-          </li>
-          <li>
-            <a href="/contact"> Contact Us </a>
-          </li>
-          <li>
-            <a href="/about"> About Us </a>
-          </li>
-        </ul>
         <div class="footer-menu">
           <ul class="f-menu">
             <li>
@@ -56,5 +60,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

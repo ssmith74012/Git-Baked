@@ -13,8 +13,7 @@ async function createProduct({
     console.log("create product works");
     const response = await client.query(
       `
-        INSERT INTO products(user_id, title, description, price, quantity, image, category_id ) VALUES ($1, $2, $3, $4, $5, $6, $7)
-        RETURNING *;
+        INSERT INTO products(user_id, title, description, price, quantity, image, category_id ) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;
       `,
       [user_id, title, description, price, quantity, image, category_id]
     );

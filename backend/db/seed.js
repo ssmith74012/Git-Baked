@@ -108,7 +108,11 @@ async function createInitialReviews() {
 
 async function createCategories() {
   try {
-    const categories = [{ name: "men" }, { name: "women" }, { name: "youth" }];
+    const categories = [
+      { name: "cookies" },
+      { name: "bagels" },
+      { name: "cakes" },
+    ];
     for (let category of categories) {
       await client.query(
         `

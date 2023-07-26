@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-// import BASE_URL from "../BaseURL";
+
 import { Link, useNavigate } from "react-router-dom";
+import NewProduct from "./NewProduct";
 
 const BASE_URL = `http://localhost:3001`;
 
@@ -133,14 +134,14 @@ const Products = (props) => {
           >
             Cakes{" "}
           </span>
-          {/* <span
+          <span
             className="category"
             onClick={() => {
               filterByCategory(4);
             }}
           >
             All Products
-          </span> */}
+          </span>
         </div>
 
         <div className="category-select">Currently Viewing {categoryName}</div>
@@ -175,13 +176,13 @@ const Products = (props) => {
                 <h2>{product.title}</h2>
                 <h3>${product.price}</h3>
                 <h5>{product.description}</h5>
-                {product.category_id == 1 ? (
+                {/* {product.category_id == 1 ? (
                   <h5>Cookies</h5>
                 ) : product.category_id == 2 ? (
                   <h5>Bagels</h5>
                 ) : (
                   <h5>Cakes</h5>
-                )}
+                )} */}
                 {user && product.quantity > 0 && (
                   <>
                     <div>
@@ -193,14 +194,15 @@ const Products = (props) => {
                           setQuantity(e.target.value);
                         }}
                       >
-                        {/* {Array(product.quantity)
+                        {Array(product.quantity)
                           .fill(" ")
                           .map((index) => {
                             return (
                               <option value={index + 1}>{index + 1}</option>
                             );
-                          })} */}
+                          })}
                       </select>
+
                       <button
                         className="addCart"
                         onClick={() => {
@@ -225,6 +227,28 @@ const Products = (props) => {
             );
           })}
       </div>
+      <footer class="footer-content">
+        <h1> Git Baked </h1>
+        <div class="footer-menu">
+          <ul class="f-menu">
+            <li>
+              <a href="/"> Home</a>
+            </li>
+            <li>
+              <a href="/products"> Products</a>
+            </li>
+            <li>
+              <a href="/login"> Login </a>
+            </li>
+            <li>
+              <a href="/register"> Register </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <h2> 2023 Fullstack Academy Cohort </h2>
+        </div>
+      </footer>
     </>
   );
 };

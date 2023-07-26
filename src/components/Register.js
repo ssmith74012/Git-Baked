@@ -119,17 +119,6 @@ const Register = (props) => {
 
       <footer class="footer-content">
         <h1> Git Baked </h1>
-        <ul class="footer-links">
-          <li>
-            <a href="/products"> Products </a>
-          </li>
-          <li>
-            <a href="/contact"> Contact Us </a>
-          </li>
-          <li>
-            <a href="/about"> About Us </a>
-          </li>
-        </ul>
         <div class="footer-menu">
           <ul class="f-menu">
             <li>
@@ -144,9 +133,6 @@ const Register = (props) => {
             <li>
               <a href="/register"> Register </a>
             </li>
-            <Link to="/cart">
-              <FaIcons.FaCartPlus className="cart-icon" />
-            </Link>
           </ul>
         </div>
         <div class="footer-bottom">

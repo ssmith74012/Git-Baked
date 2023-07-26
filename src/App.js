@@ -10,6 +10,8 @@ import Register from "./components/Register";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import Admin from "./components/Admin";
+import Checkout from "./components/Checkout";
+import Contact from "./components/Contact";
 
 const BASE_URL = `http://localhost:3001`;
 
@@ -189,6 +191,9 @@ function App() {
           path="/admin"
           element={<Admin allUsers={allUsers} user={user} />}
         />
+
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

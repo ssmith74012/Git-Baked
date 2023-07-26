@@ -1,9 +1,32 @@
 import { useEffect, useState } from "react";
-// import BASE_URL from "../BaseURL";
+import { Link } from "react-router-dom";
 
 const BASE_URL = `http://localhost:3001`;
 
 const Cart = (props) => {
+  let plus_btns = document.querySelectorAll("#plus-button");
+  let minus_btns = document.querySelectorAll("#minus-button");
+  let qty_inputs = document.querySelectorAll("#quantity");
+
+  plus_btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      qty_inputs.forEach((qty) => {
+        qty.value++;
+      });
+    });
+  });
+  minus_btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      qty_inputs.forEach((qty) => {
+        if (qty.value > 1) {
+          qty.value--;
+        } else {
+          qty.value = 0;
+        }
+      });
+    });
+  });
+
   const {
     activeOrder,
     products,
@@ -80,7 +103,20 @@ const Cart = (props) => {
                   </div>
                   <div>
                     <h3 className="product-quantity">
-                      Quantity: {product.cartquantity}
+                      Quantity:
+                      <input
+                        type="button"
+                        value="-"
+                        id="minus-button"
+                        for="quantity"
+                      />
+                      <input type="number" id="quantity" value="1" min="0" />
+                      <input
+                        type="button"
+                        value="+"
+                        id="plus-button"
+                        for="quantity"
+                      />
                     </h3>
                   </div>
                   <div>
@@ -95,7 +131,11 @@ const Cart = (props) => {
           <div className="subtotal">
             <div className="total">Subtotal: ${sum}</div>
 
-            <button className="checkout-btn">Checkout</button>
+            <a href="/checkout">
+              <button class="checkout-btn">
+                <b>Checkout</b>
+              </button>
+            </a>
           </div>
         </div>
       </div>

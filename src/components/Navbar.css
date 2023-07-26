@@ -5,13 +5,11 @@
   justify-content: left;
   align-items: center;
 }
-
 .menu-bars {
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
 }
-
 .nav-menu {
   background-color: #1075ff;
   width: 250px;
@@ -23,12 +21,10 @@
   left: -100%;
   transition: 850ms;
 }
-
 .nav-menu.active {
   left: 0;
   transition: 150ms;
 }
-
 .nav-text {
   display: flex;
   justify-content: start;
@@ -37,7 +33,6 @@
   list-style: none;
   height: 60px;
 }
-
 .nav-text a {
   text-decoration: none;
   color: white;
@@ -49,15 +44,12 @@
   padding: 0 16px;
   border-radius: 4px;
 }
-
 .nav-text a:hover {
   background-color: #1a83ff;
 }
-
 .nav-menu-items {
   width: 100%;
 }
-
 .navbar-toggle {
   background-color: #1075ff;
   width: 100%;
@@ -66,15 +58,12 @@
   justify-content: start;
   align-items: center;
 }
-
 span {
   margin-left: 16px;
 }
-
 nav {
   background-color: #060b26;
   display: grid;
-
   height: 0;
   justify-content: right;
 }
@@ -92,10 +81,31 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: 14px;
-
   font-size: 20px;
 }
 .cart-icon {
   width: 100px;
   padding-top: 7px;
+}
+.bakeryNav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* outline: auto; */
+  align-items: center;
+  margin-top: 30px;
+  gap: 35px;
+  margin-bottom: 60px;
+}
+.bakeryNav ul {
+  display: flex;
+  gap: 60px;
+  text-decoration: none;
+  list-style: none;
+}
+.bakeryNav a {
+  color: rgb(28, 28, 224);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
 }
